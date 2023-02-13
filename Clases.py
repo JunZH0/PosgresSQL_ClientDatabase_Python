@@ -1,3 +1,6 @@
+import psycopg2
+
+
 class Cliente:
     def __init__(self, nombre_completo, dni, fecha_nacimiento, telefono):
         self.nombre_completo = nombre_completo
@@ -21,4 +24,14 @@ class Cliente:
 
         def matricular_en_deporte(self, deporte, horario):
             self.deportes.append((deporte, horario))
+
+
+class Deporte:
+    def __init__(self, nombre, precio_hora):
+        self.nombre = nombre
+        self.precio_hora = precio_hora
+
+    def mostrar_nombre(self):
+        return self.nombre
+
 
